@@ -1,8 +1,8 @@
-from euclicid import extendedeuclicid
+from euclicid import extended_euclicid
 
 def modular_linear_eq_solver(a, b, n):
     result = []
-    [d, xp, yp] = extendedeuclicid(a, n)
+    [d, xp, yp] = extended_euclicid(a, n)
     if b % d == 0:
         x0 = (xp * (b // d)) % n
         for i in range(0, d):
